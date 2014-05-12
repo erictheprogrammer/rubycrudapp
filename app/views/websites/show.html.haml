@@ -1,0 +1,11 @@
+%p#notice= notice
+
+%p
+  %b Weblink:
+  = link_to @website.weblink, @website.weblink  
+  %b User_id:
+  = @website.user_id
+
+= link_to 'Edit', edit_website_path(@website)
+\|
+= link_to 'Back', websites_path

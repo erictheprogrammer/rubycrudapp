@@ -44,6 +44,7 @@ main {
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
+  padding-left: 150px; // editttttttttttttttttttt this later and do a better things to center it so that it doesn't look bootleg
   }
 section {
   @extend .row;
@@ -84,4 +85,7 @@ section {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-xs;
+}
+td{
+  padding-right: 30px;
 }

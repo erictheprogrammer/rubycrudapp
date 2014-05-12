@@ -1,0 +1,19 @@
+%h1 Website Listings
+
+%table
+  %tr
+    %th Weblink
+    %th
+    %th
+    %th
+
+  - @websites.each do |website|
+    %tr
+      - if website.user == current_user && website.weblink =~ /https?:\/\/[\S]+/
+        %td= link_to website.weblink, website.weblink
+        %td= link_to 'Show', website
+        %td= link_to 'Edit', edit_website_path(website)
+        %td= link_to 'Destroy', website, :method => :delete, :data => { :confirm => 'Are you sure?' }
+%br
+
+= link_to 'New Website', new_website_path
